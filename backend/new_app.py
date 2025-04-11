@@ -40,8 +40,8 @@ nltk.download('stopwords')
 
 # IMAP credentials
 IMAP_SERVER = "imap.gmail.com"
-EMAIL_ACCOUNT = "g13lastyear@gmail.com"
-EMAIL_PASSWORD = "ogkm bmqt xnqy ywrp"  # Use an App Password if 2FA is enabled
+EMAIL_ACCOUNT = "your-email-id"
+EMAIL_PASSWORD = "your-email-password"  # Use an App Password if 2FA is enabled
 
 # File to store the last processed UID
 UID_FILE = "last_processed_uid.txt"
@@ -52,7 +52,7 @@ with open("tokenizer.pkl", "rb") as handle:
     tokenizer = pickle.load(handle)
 
 # URL Phishing Detection API (Example: Google Safe Browsing)
-API_KEY = "AIzaSyAP9Qzrx1loXi2iK47Zm-K0zsxreRrmlqM"
+API_KEY = "your-api-key"
 URL_CHECK_API_URL = f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={API_KEY}"
 
 

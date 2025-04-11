@@ -1,1 +1,3 @@
 myenv/
+.env
+backend/main_script.py

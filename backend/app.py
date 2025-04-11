@@ -48,11 +48,11 @@ init_db()
 
 # Email settings
 IMAP_SERVER = "imap.gmail.com"
-EMAIL_ACCOUNT = "g13lastyear@gmail.com"
-EMAIL_PASSWORD = "ogkm bmqt xnqy ywrp"
+EMAIL_ACCOUNT = "your-email-id"
+EMAIL_PASSWORD = "your-email-password"
 
 # Google Safe Browsing API
-API_KEY = "AIzaSyAP9Qzrx1loXi2iK47Zm-K0zsxreRrmlqM"
+API_KEY = "your-api-key"
 URL_CHECK_API_URL = f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={API_KEY}"
 
 # Utility functions
