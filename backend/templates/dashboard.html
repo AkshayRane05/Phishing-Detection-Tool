@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Emails Dashboard</title>
+</head>
+
+<body>
+    <h1>Phishing Emails</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Prediction</th>
+            <th>Confidence</th>
+            <th>Timestamp</th>
+            <th>Verified</th>
+            <th>Action</th>
+        </tr>
+        {% for email in emails %}
+        <tr>
+            <td>{{ email[0] }}</td>
+            <td>{{ email[1] }}</td>
+            <td>{{ email[2] }}</td>
+            <td>{{ email[3] }}</td>
+            <td>{{ email[4] }}</td>
+            <td>{{ email[5] }}</td>
+            <td>{{ "Yes" if email[6] else "No" }}</td>
+            <td><a href="{{ url_for('verify_email', email_id=email[0]) }}">Verify</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('trends') }}">View Trends</a>
+</body>
+
+</html>
