@@ -52,7 +52,10 @@ EMAIL_ACCOUNT = "your-email-id"
 EMAIL_PASSWORD = "your-email-password"
 
 # Google Safe Browsing API
-API_KEY = "your-api-key"
+API_KEY = os.getenv("GOOGLE_API_KEY")
+if not API_KEY:
+    raise ValueError("GOOGLE_API_KEY environment variable is not set")
+
 URL_CHECK_API_URL = f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={API_KEY}"
 
 # Utility functions
